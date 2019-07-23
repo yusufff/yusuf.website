@@ -1,0 +1,232 @@
+:root {
+	font-family: 'Montserrat', sans-serif;
+	--multiplier: 1vmin;
+}
+@media screen and (max-width: 1000px) {
+	:root {
+		--multiplier: 1.3vmin;
+	}
+}
+@media screen and (max-width: 800px) {
+	:root {
+		--multiplier: 12px;
+	}
+}
+header {
+	position: fixed;
+	display: block;
+	top: 30px; left: 30px;
+}
+header span {
+	position: relative;
+	display: block;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 700;
+	color: #cbcbcb;
+	line-height: 1;
+}
+.plus {
+	position: relative;
+	display: block;
+	--size: 28;
+	width: calc(var(--size) * 1px);
+	height: calc(var(--size) * 1px);
+}
+.plus:before,
+.plus:after {
+	position: absolute;
+	display: block;
+	content: '';
+	top: 50%; left: 50%;
+	background-color: currentColor;
+	transform: translate(-50%, -50%);
+}
+.plus:before {
+	width: 100%;
+	height: calc((var(--size) / 4.5) * 1px);
+}
+.plus:after {
+	width: calc((var(--size) / 4.5) * 1px);
+	height: 100%;
+}
+header span .plus {
+	position: absolute;
+	bottom: 100%; right: 100%;
+	--size: 25;
+	transform: translate(20%, 30%);
+}
+.main section {
+	position: relative;
+	display: block;
+	min-height: 100vh;
+}
+
+/** Greeting **/
+.greeting {
+	position: absolute;
+	display: block;
+	bottom: calc(10 * var(--multiplier)); left: calc(10 * var(--multiplier));
+}
+.greeting span {
+	display: block;
+	font-size: 40vmin;
+	font-weight: 600;
+	line-height: 1;
+	color: #F73131;
+}
+.greeting h1 {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding-left: 20vmin;
+	font-size: 6vmin;
+	font-weight: 600;
+	line-height: 1;
+}
+.greeting h1:after {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 2px; height: 100%;
+	top: 50%; right: -5%;
+	background-color: #000;
+	transform: translateY(-50%);
+}
+
+/** Intro **/
+#intro {
+	display: flex;
+	align-items: flex-end;
+}
+.intro {
+	position: relative;
+	display: block;
+	padding: calc(10 * var(--multiplier));
+	width: 400px;
+}
+@media screen and (max-width: 800px) {
+	.intro {
+		padding: calc(5 * var(--multiplier));
+		width: calc(400 + ((5 * var(--multiplier)) * 2));
+	}
+}
+.intro p {
+	margin: calc(2 * var(--multiplier)) 0;
+	font-size: calc(1.7 * var(--multiplier));
+	font-weight: 300;
+	line-height: 1.4;
+}
+.intro b {
+	display: inline-block;
+	max-width: 310px;
+	font-size: calc(1.9 * var(--multiplier));
+	font-weight: 700;
+	line-height: 1.5;
+}
+.intro b span {
+	padding: 5px 10px;
+	background-color: #F73131;
+}
+.intro b i {
+	font-style: normal;
+}
+
+/** About Me **/
+.about-me {
+	padding: calc(10 * var(--multiplier));
+}
+@media screen and (max-width: 800px) {
+	.about-me {
+		padding: calc(5 * var(--multiplier));
+	}
+}
+.block {
+	position: relative;
+	display: block;
+	margin: calc(10 * var(--multiplier)) 0;
+	padding-left: calc(4 * var(--multiplier));
+}
+.block-title {
+	position: relative;
+	display: block;
+	margin: 0;
+	margin-bottom: calc(2 * var(--multiplier));
+	font-size: calc(3 * var(--multiplier));
+	font-weight: 600;
+}
+.block-title .plus {
+	position: absolute;
+	top: 50%; right: calc(100% + var(--multiplier));
+	color: #cbcbcb;
+	transform: translateY(-50%);
+}
+.block-content {
+	position: relative;
+}
+.block-item {
+	display: block;
+	margin-bottom: calc(1.5 * var(--multiplier));
+}
+.block-item-title {
+	font-size: calc(1.5 * var(--multiplier));
+	font-weight: 600;
+}
+.block-item-subtitle {
+	font-size: calc(1.5 * var(--multiplier));
+	font-weight: 300;
+}
+.block-item-footer {
+	font-size: calc(1 * var(--multiplier));
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+/** Experience **/
+.experience .block-content:before {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 2px; height: 100%;
+	top: 0; right: calc(100% + (2 * var(--multiplier)));
+	background-color: #cbcbcb;
+}
+.experience .block-item-title {
+	position: relative;
+}
+.experience .block-item-title:before {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 8px; height: 8px;
+	top: 50%; right: calc(100% + (2 * var(--multiplier)));
+	background-color: #fff;
+	border: 2px solid #cbcbcb;
+	border-radius: 50%;
+	transform: translate(calc(50% - 1px), -50%);
+}
+
+/** Contact **/
+.contact {
+	padding: calc(10 * var(--multiplier));
+}
+@media screen and (max-width: 800px) {
+	.contact {
+		padding: calc(5 * var(--multiplier));
+	}
+}
+.findme .block-item-subtitle {
+	line-height: 1.5;
+}
+.findme a {
+	color: currentColor;
+	text-decoration: none;
+}
+.findme b {
+	display: inline-block;
+	width: calc(14 * var(--multiplier));
+	font-weight: 600;
+}
+.findme span {
+	display: inline-block;
+}
