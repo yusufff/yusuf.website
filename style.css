@@ -1,6 +1,6 @@
 :root {
 	font-family: 'Montserrat', sans-serif;
-	--multiplier: 1vmin;
+	--multiplier: 13px;
 }
 @media screen and (max-width: 1000px) {
 	:root {
@@ -9,7 +9,7 @@
 }
 @media screen and (max-width: 800px) {
 	:root {
-		--multiplier: 12px;
+		--multiplier: 10px;
 	}
 }
 header {
