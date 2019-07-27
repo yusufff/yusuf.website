@@ -1,6 +1,7 @@
 :root {
 	font-family: 'Montserrat', sans-serif;
 	--multiplier: 13px;
+	--easing: cubic-bezier(0.23,1,0.32,1);
 }
 @media screen and (max-width: 1000px) {
 	:root {
@@ -62,42 +63,110 @@ header span .plus {
 	min-height: 100vh;
 }
 
+/** UFOs **/
+.ufo {
+	z-index: -1;
+	position: absolute;
+	background: #00F1C9;
+	border-radius: 12px;
+}
+.ufo-sm {
+	width: 60px; height: 60px;
+}
+.ufo-md {
+	width: 120px; height: 120px;
+}
+.ufo-lg {
+	width: 160px; height: 160px;
+}
+.ufo-green {
+	background: #00F1C9;
+}
+.ufo-purple {
+	background: #5000F1;
+}
+.ufo-red {
+	background: #F73131;
+}
+
 /** Greeting **/
 .greeting {
 	position: absolute;
-	display: block;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 	bottom: calc(10 * var(--multiplier)); left: calc(10 * var(--multiplier));
 }
 .greeting span {
+	position: relative;
 	display: block;
+	margin-bottom: 10px;
 	font-size: 40vmin;
 	font-weight: 600;
 	line-height: 1;
-	color: #F73131;
+	--color: #F73131;
+	color: transparent;
 }
 .greeting h1 {
 	position: relative;
 	display: block;
 	margin: 0;
-	padding-left: 20vmin;
+	margin-left: 20vmin;
+	padding-right: 5%;
 	font-size: 6vmin;
 	font-weight: 600;
 	line-height: 1;
+	white-space: nowrap;
+	--color: #000;
+	color: transparent;
 }
-.greeting h1:after {
+.greeting h1:before {
 	position: absolute;
 	display: block;
 	content: '';
 	width: 2px; height: 100%;
-	top: 50%; right: -5%;
-	background-color: #000;
+	top: 50%; right: 0;
+	background-color: currentColor;
 	transform: translateY(-50%);
+}
+.greeting > * {
+	overflow: hidden;
+}
+.greeting > *:after {
+	position: absolute;
+	display: block;
+	content: '';
+	top: 0; left: -20px;
+	bottom: 0; right: -20px;
+	background-color: var(--color);
+	transform: translate(-110%, 0);
+}
+.loaded .greeting > * {
+	animation: text-reveal 1s calc(var(--delay) * 1s) steps(1) both;
+}
+@keyframes text-reveal {
+	0% { color: transparent; }
+	50%, 100% { color: var(--color); }
+}
+.loaded .greeting > *:after {
+	animation: block-reveal 1s calc(var(--delay) * 1s) ease-in-out both;
+}
+@keyframes block-reveal {
+	0% { transform: translate(-110%, 0); }
+	45%, 55% { transform: translate(0, 0); }
+	100% { transform: translate(110%, 0); }
 }
 
 /** Intro **/
 #intro {
 	display: flex;
 	align-items: flex-end;
+}
+#intro .ufo-green {
+	top: 40%; left: 75%;
+}
+#intro .ufo-purple {
+	top: 100%; left: 50%;
 }
 .intro {
 	position: relative;
@@ -133,6 +202,12 @@ header span .plus {
 }
 
 /** About Me **/
+#about-me .ufo-green {
+	top: 100%; left: 10%;
+}
+#about-me .ufo-red {
+	top: 200%; left: 80%;
+}
 .about-me {
 	padding: calc(10 * var(--multiplier));
 }
@@ -207,6 +282,9 @@ header span .plus {
 }
 
 /** Contact **/
+#contact .ufo-purple {
+	top: 200%; right: 10%;
+}
 .contact {
 	padding: calc(10 * var(--multiplier));
 }
