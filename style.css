@@ -61,6 +61,7 @@ header span .plus {
 	position: relative;
 	display: block;
 	min-height: 100vh;
+	overflow: hidden;
 }
 
 /** UFOs **/
@@ -283,7 +284,7 @@ header span .plus {
 
 /** Contact **/
 #contact .ufo-purple {
-	top: 200%; right: 10%;
+	top: 230%; right: 10%;
 }
 .contact {
 	padding: calc(10 * var(--multiplier));
