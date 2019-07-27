@@ -164,10 +164,10 @@ header span .plus {
 	align-items: flex-end;
 }
 #intro .ufo-green {
-	top: 40%; left: 75%;
+	top: 75%; left: 75%;
 }
 #intro .ufo-purple {
-	top: 100%; left: 50%;
+	top: 65%; left: 50%;
 }
 .intro {
 	position: relative;
@@ -204,10 +204,10 @@ header span .plus {
 
 /** About Me **/
 #about-me .ufo-green {
-	top: 100%; left: 10%;
+	top: 50%; left: 10%;
 }
 #about-me .ufo-red {
-	top: 200%; left: 80%;
+	top: 50%; left: 80%;
 }
 .about-me {
 	padding: calc(10 * var(--multiplier));
@@ -284,7 +284,7 @@ header span .plus {
 
 /** Contact **/
 #contact .ufo-purple {
-	top: 230%; right: 10%;
+	top: 40%; right: 10%;
 }
 .contact {
 	padding: calc(10 * var(--multiplier));
