@@ -13,6 +13,9 @@
 		--multiplier: 10px;
 	}
 }
+html, body {
+	scroll-behavior: smooth;
+}
 header {
 	position: fixed;
 	display: block;
@@ -62,6 +65,38 @@ header span .plus {
 	display: block;
 	min-height: 100vh;
 	overflow: hidden;
+}
+
+/** Nav **/
+.aside {
+	z-index: -1;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+	top: 0; right: 0;
+	bottom: 0; left: 0;
+	pointer-events: none;
+	overflow: hidden;
+}
+.nav {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+}
+.nav span {
+	position: relative;
+	display: flex;
+	padding: calc(var(--opacity) * 6vmin) 1vmin;
+	font-size: 10vmin;
+	font-weight: 800;
+	color: #f8f8f8;
+	opacity: var(--opacity);
+	transform: scale(calc(var(--opacity) + 1.1));
+	transform-origin: 100% 50%;
 }
 
 /** UFOs **/
