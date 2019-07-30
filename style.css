@@ -119,10 +119,10 @@ header span .plus {
 	background: #00F1C9;
 }
 .ufo-purple {
-	background: #5000F1;
+	background: #b48fff;
 }
 .ufo-red {
-	background: #F73131;
+	background: #ff6060;
 }
 
 /** Greeting **/
@@ -140,7 +140,7 @@ header span .plus {
 	font-size: 40vmin;
 	font-weight: 600;
 	line-height: 1;
-	--color: #F73131;
+	--color: #ff6060;
 	color: transparent;
 }
 .greeting h1 {
@@ -231,7 +231,7 @@ header span .plus {
 }
 .intro b span {
 	padding: 5px 10px;
-	background-color: #F73131;
+	background-color: #ff6060;
 }
 .intro b i {
 	font-style: normal;
