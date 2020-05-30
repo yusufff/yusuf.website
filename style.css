@@ -294,27 +294,36 @@ header span .plus {
 }
 
 /** Experience **/
-.experience .block-content:before {
-	position: absolute;
-	display: block;
-	content: '';
-	width: 2px; height: 100%;
-	top: 0; right: calc(100% + (2 * var(--multiplier)));
-	background-color: #cbcbcb;
+.experience-map {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
 }
-.experience .block-item-title {
-	position: relative;
+.experience-map-timeline {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #cbcbcb;
 }
-.experience .block-item-title:before {
-	position: absolute;
-	display: block;
-	content: '';
-	width: 8px; height: 8px;
-	top: 50%; right: calc(100% + (2 * var(--multiplier)));
-	background-color: #fff;
-	border: 2px solid #cbcbcb;
-	border-radius: 50%;
-	transform: translate(calc(50% - 1px), -50%);
+.experience-map-timeline span {
+  position: relative;
+  display: flex;
+  padding: 10px 0;
+  font-size: 13px;
+  color: #cbcbcb;
+}
+.experience-map-timeline span:after {
+  position: absolute;
+  display: block;
+  content: '';
+  bottom: 0; left: 50%;
+  width: 1px; height: 6px;
+  background-color: #cbcbcb;
+}
+.experience-map-item {
+  position: relative;
+  flex: 1;
 }
 
 /** Contact **/
