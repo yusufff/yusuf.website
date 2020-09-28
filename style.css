@@ -98,6 +98,19 @@ header span .plus {
 	transform: scale(calc(var(--opacity) + 1.1));
 	transform-origin: 100% 50%;
 }
+.nav span:before {
+	display: none;
+	content: attr(data-short);
+	font-size: 10vmin;
+}
+@media (orientation: landscape) {
+	.nav span {
+		font-size: 0;
+	}
+	.nav span:before {
+		display: block;
+	}
+}
 
 /** UFOs **/
 .ufo {
