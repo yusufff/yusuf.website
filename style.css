@@ -103,7 +103,7 @@ header span .plus {
 	content: attr(data-short);
 	font-size: 10vmin;
 }
-@media (orientation: landscape) {
+@media (orientation: portrait) {
 	.nav span {
 		font-size: 0;
 	}
