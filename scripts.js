@@ -36,7 +36,7 @@ const observer = new IntersectionObserver(entries => {
 const buildNav = () => {
 	let nav = ``;
 	$$('[data-nav-id]').forEach(section => {
-		nav += `<span data-id="${section.dataset.navId}">${section.dataset.navTitle}</span>`;
+		nav += `<span data-id="${section.dataset.navId}" data-short="${section.dataset.navShortTitle}">${section.dataset.navTitle}</span>`;
 		observer.observe(section);
 	})
 	$('#nav').innerHTML = nav;
