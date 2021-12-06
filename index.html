@@ -34,6 +34,17 @@
 
 	<link rel="stylesheet" href="/normalize.css">
 	<link rel="stylesheet" href="/style.css">
+	<noscript>
+		<style type="text/css">
+			.greeting > * {
+				animation: text-reveal 1s calc(var(--delay) * 1s) steps(1) both;
+			}
+			.greeting > *:after {
+				animation: block-reveal 1s calc(var(--delay) * 1s) ease-in-out both;
+			}
+		</style>
+	</noscript>
+
 	<link rel="stylesheet" media="print" href="/print.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap&subset=latin-ext" rel="stylesheet">
 
