@@ -2,8 +2,10 @@ const $ = selector => document.querySelector(selector);
 const $$ = selector => document.querySelectorAll(selector);
 const interpolate = (a, b) => (a = +a, b -= a, t => a + b * t);
 
-const date = new Date();
-$('#age').innerText = (+(date.getFullYear()) - 1996)
+if ($('#age')) {
+	const date = new Date();
+	$('#age').innerText = (+(date.getFullYear()) - 1996)
+}
 
 let timeout = null;
 window.addEventListener('DOMContentLoaded', () => {
