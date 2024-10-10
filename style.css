@@ -237,7 +237,7 @@ header span .plus {
 }
 .intro b {
 	display: inline-block;
-	max-width: 310px;
+	max-width: 345px;
 	font-size: calc(1.9 * var(--multiplier));
 	font-weight: 700;
 	line-height: 1.5;
